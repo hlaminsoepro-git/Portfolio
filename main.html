@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>HMS PortfolioPro</title>
+</head>
+
+<body class="bg-[rgb(16,22,34)]">
+    <!-- navbar -->
+    <div class="hidden md:bg-gray-900 md:flex md:p-6 md:block">
+        <div>
+            <h1 class=" text-2xl text-white ms-10  md:block text-2xl font-bold text-white  mt-3 md:ms-60">
+                DevPortfolio
+            </h1>
+        </div>
+        <div class=" hidden md:block ms-40 mt-3">
+            <a href="#Home" class="text-white ms-10">Home</a>
+            <a href="#Projects" class="text-white ms-10">Projects</a>
+            <a href="#About" class="text-white ms-10">About</a>
+            <a href="#Skills" class="text-white ms-10">Skills</a>
+            <a href="#Contact" class="text-white ms-10">Contact</a>
+
+        </div>
+        <div>
+            <button class=" md:hidden"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                    fill="currentColor" class="bi bi-list ms-[500%]  text-blue-500 mt-3" viewBox="0 0 16 16"
+                    style="cursor: pointer;">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg></button>
+        </div>
+        <div class=" flex">
+            <button class=" bg-[rgb(15,90,226)] text-white p-2 rounded-[4px] ms-50 mt-2 w-20">Hire
+                Me</button>
+        </div>
+    </div>
+    <div class="bg-gray-900 p-6 flex md:hidden">
+        <p class="text-2xl font-bold text-white mt-1">DevPortfolio</p>
+        <div>
+            <button onclick="showdiv()"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                    fill="currentColor" class="bi bi-list   text-blue-500 ms-90" viewBox="0 0 16 16"
+                    style="cursor: pointer;">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg></button>
+            <div class="myDropdown" style="display:none; color:white;">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Projects</a>
+                <a href="">Skills</a>
+                <a href="">Contact</a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="bg-gray-900 p-6  hidden" id="mobilenav">
+        <div class="text-white font-bold ms-60">
+            <a href="#Home" class="text-[20px]  p-4">Home</a><br><br><br>
+            <a href="#About" class="mt-10 text-[20px] p-4">About</a><br><br><br>
+            <a href="#Projects" class="mt-10 text-[20px] p-4">Projects</a><br><br><br>
+            <a href="#Skills" class="mt-10 text-[20px] p-4">Skills</a><br><br><br>
+            <a href="#Contact" class="mt-10 text-[20px] p-4">Conact</a>
+
+        </div>
+    </div>
+    <script>
+        var toggle = true;
+        function showdiv() {
+            if (toggle === true) {
+                document.getElementById("mobilenav").classList.remove("hidden");
+                toggle = false;
+            } else {
+                document.getElementById("mobilenav").classList.add("hidden");
+                toggle = true;
+            }
+        }
+    </script>
+    <!-- navbar -->
+    <!-- landing -->
+
+    <div class="flex" id="Home">
+        <div><br><br>
+            <h1 class="text-white text-[45px] ms-15 md:block text-6xl font-bold md:mt-25 md:ms-60">Creative<br>
+                Developer &
+            </h1>
+            <h1 class="text-blue-600 text-[45px] ms-15 md:block text-6xl font-bold md:ms-60 mt-2"> Problem Solver</h1>
+            <div class="text-gray-500 ms-15 md:ms-60 mt-4">I build high-performance wed applications clean code and<br>
+                excepational
+                user
+                experiences.Focused on
+                modern fronted<br> technologies and scalable backend soluations.</div>
+            <div class="flex ms-15 md:ms-60 mt-10">
+                <button class="bg-[rgb(15,90,226)] p-2 w-40 text-white rounded-[4px] ">View Projects</button>
+                <h1
+                    class="border-1 border-gray-500 w-50 p-2 rounded-[4px] text-white text-center ms-10 hover:bg-white hover:text-black transition delay-150 duration-300 ease-in-out">
+                    download Resume
+                </h1>
+            </div>
+        </div>
+        <div>
+            <img src="images/cod.jpg" alt=""
+                class=" hidden md:block w-150 mt-40 ms-25 rounded-2xl hover:skew-3 transition delay-150 duration-300 ease-in-out">
+        </div>
+    </div><br><br>
+    <!-- landing -->
+
+    <!-- landing -->
+    <!-- about -->
+    <div class="md:mt-40" id="About"> <br><br>
+        <div class="md:flex">
+            <img src="images/Gman.png"
+                class="w-65 ms-15 rounded-2xl md:ms-60 hover:scale-75 transition delay-150 duration-300 ease-in-out">
+            <div class="mt-6 ms-15 md:ms-25">
+                <h1 class="font-bold text-white text-3xl">About Me</h1>
+                <h1 class="hidden md:block text-blue-600 font-bold text-[18px] mt-4 ">Junior fornted Developer</h1>
+                <div>
+                    <h1 class="md:hidden text-blue-600 font-bold text-[18px] mt-5">Junior fornted Developer</h1><br>
+                    <span class=" mt-6 text-justify  md:hidden text-gray-400  text-left">Lorem ipsum dolor sit
+                        amet
+                        consectetur
+                        adipisicing
+                        elit.<br>
+                        Nemo optio cumque eos, non fuga nisi sequibr<br>
+                        eveniet maxime inciduntbr
+                        sint quas libero veritatis.</span><br><br>
+
+                    <p class=" md:hidden text-gray-400 text-left">Lorem ipsum dolor sit amet consectetur,
+                        adipisicing elit.<br>
+                        Suscipit ullam vero
+                        voluptatum sequi omnis, deserunt pariatur esse,<br> aperiam nam labore inventore quidem
+                        excepturi
+                        eaque?
+                        Quos illum inventore sunt consequuntur libero.
+                        Lorem ipsum dolor sit amet<br> consectetur adipisicing elit.<br></p>
+
+
+                </div>
+
+                <span class=" hidden md:block text-gray-400  text-left">Lorem ipsum dolor sit amet consectetur
+                    adipisicing
+                    elit.<br>
+                    Nemo optio cumque eos, non fuga nisi sequi repudiandaebr
+                    eveniet maxime incidunt sint quas libero veritatis.</span><br>
+
+                <p class=" hidden md:block text-gray-400 text-left">Lorem ipsum dolor sit amet consectetur,
+                    adipisicing elit.
+                    Suscipit ullam vero
+                    voluptatum sequi omnis, deserunt<br> pariatur esse, aperiam nam labore inventore quidem excepturi
+                    eaque?<br>
+                    Quos illum inventore sunt consequuntur libero.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br></p>
+
+                <div class="flex">
+                    <div class="flex mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt-fill text-blue-600 mt-1" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                        </svg>
+                        <p class="text-gray-400 ms-2">Yangon, Myanmar</p>
+                    </div>
+                    <div class="flex mt-5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-pc-display-horizontal text-blue-500 ms-5 mt-1" viewBox="0 0 16 16">
+                            <path
+                                d="M1.5 0A1.5 1.5 0 0 0 0 1.5v7A1.5 1.5 0 0 0 1.5 10H6v1H1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5v-1h4.5A1.5 1.5 0 0 0 16 8.5v-7A1.5 1.5 0 0 0 14.5 0zm0 1h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5M12 12.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0m2 0a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0M1.5 12h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M1 14.25a.25.25 0 0 1 .25-.25h5.5a.25.25 0 1 1 0 .5h-5.5a.25.25 0 0 1-.25-.25" />
+                        </svg>
+                        <p class="text-gray-400 ms-2">Part Time Job</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    <!-- about -->
+
+    <!-- Skills -->
+    <div class="mt-15 ms-15 md:mt-50 md:ms-60 " id="Skills">
+        <h1 class="text-white text-3xl md:block md:text-3xl font-bold">Technical Arsenal</h1>
+        <p class="mt-2 text-gray-400">Tools and technologies I use to bring ideas to life.</p>
+
+
+        <div class="flex md:hidden ">
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                    class="bi bi-filetype-html text-blue-500 ms-16 mt-6 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zm-9.736 7.35v3.999h-.791v-1.714H1.79v1.714H1V11.85h.791v1.626h1.682V11.85h.79Zm2.251.662v3.337h-.794v-3.337H4.588v-.662h3.064v.662zm2.176 3.337v-2.66h.038l.952 2.159h.516l.946-2.16h.038v2.661h.715V11.85h-.8l-1.14 2.596H9.93L8.79 11.85h-.805v3.999zm4.71-.674h1.696v.674H12.61V11.85h.79v3.325Z" />
+                </svg>
+                <p class="text-white ms-16 mt-2 font-bold ">HTML</p><br>
+            </div>
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10 ms-25">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-css text-blue-500 ms-16 mt-8 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zM4.59 7.498q-.908 0-1.455.508-.547.507-.547 1.484v3.106q0 .986.527 1.484t1.406.498q.576 0 1.016-.224.45-.225.703-.674.255-.45.254-1.114v-.185h-1.22v.176q0 .449-.186.683t-.527.235q-.372-.01-.557-.264-.186-.255-.186-.752V9.686q0-.547.166-.811.177-.264.577-.264.321 0 .517.225.195.224.195.693v.205h1.23V9.52q0-.674-.243-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.586 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.304.42.967.732l.469.215q.44.186.625.43.186.244.186.635 0 .478-.166.703-.157.224-.528.224-.36 0-.547-.244-.185-.243-.205-.752H6.87q.02.996.498 1.524.479.527 1.387.527t1.416-.518.508-1.484q0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.175-.195.508-.195.36 0 .508.234.156.234.175.703h1.123q-.03-.976-.498-1.484-.468-.518-1.308-.518m4.057 0q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518" />
+                </svg>
+                <p class="text-white ms-18 mt-4 font-bold ">CSS</p><br>
+            </div>
+        </div>
+
+        <div class="flex md:hidden">
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-bootstrap text-blue-500 ms-16 mt-8 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path
+                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                    <path
+                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                </svg>
+                <p class="text-white ms-10 mt-2 font-bold ">BOOTSTRAP</p>
+            </div>
+
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10 ms-25">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-css text-blue-500 ms-16 mt-8 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zM4.59 7.498q-.908 0-1.455.508-.547.507-.547 1.484v3.106q0 .986.527 1.484t1.406.498q.576 0 1.016-.224.45-.225.703-.674.255-.45.254-1.114v-.185h-1.22v.176q0 .449-.186.683t-.527.235q-.372-.01-.557-.264-.186-.255-.186-.752V9.686q0-.547.166-.811.177-.264.577-.264.321 0 .517.225.195.224.195.693v.205h1.23V9.52q0-.674-.243-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.586 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.304.42.967.732l.469.215q.44.186.625.43.186.244.186.635 0 .478-.166.703-.157.224-.528.224-.36 0-.547-.244-.185-.243-.205-.752H6.87q.02.996.498 1.524.479.527 1.387.527t1.416-.518.508-1.484q0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.175-.195.508-.195.36 0 .508.234.156.234.175.703h1.123q-.03-.976-.498-1.484-.468-.518-1.308-.518m4.057 0q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518" />
+                </svg>
+                <p class="text-white ms-7 mt-4 font-bold ">TAILWIND CSS</p><br>
+            </div>
+        </div>
+
+
+        <div class="hidden md:block md:flex">
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="60" fill="currentColor"
+                    class="bi bi-filetype-html text-blue-500 ms-16 mt-6 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 4.5V11h-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zm-9.736 7.35v3.999h-.791v-1.714H1.79v1.714H1V11.85h.791v1.626h1.682V11.85h.79Zm2.251.662v3.337h-.794v-3.337H4.588v-.662h3.064v.662zm2.176 3.337v-2.66h.038l.952 2.159h.516l.946-2.16h.038v2.661h.715V11.85h-.8l-1.14 2.596H9.93L8.79 11.85h-.805v3.999zm4.71-.674h1.696v.674H12.61V11.85h.79v3.325Z" />
+                </svg>
+                <p class="text-white ms-16 mt-2 font-bold ">HTML</p><br>
+            </div>
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10 ms-25">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-css text-blue-500 ms-16 mt-8 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zM4.59 7.498q-.908 0-1.455.508-.547.507-.547 1.484v3.106q0 .986.527 1.484t1.406.498q.576 0 1.016-.224.45-.225.703-.674.255-.45.254-1.114v-.185h-1.22v.176q0 .449-.186.683t-.527.235q-.372-.01-.557-.264-.186-.255-.186-.752V9.686q0-.547.166-.811.177-.264.577-.264.321 0 .517.225.195.224.195.693v.205h1.23V9.52q0-.674-.243-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.586 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.304.42.967.732l.469.215q.44.186.625.43.186.244.186.635 0 .478-.166.703-.157.224-.528.224-.36 0-.547-.244-.185-.243-.205-.752H6.87q.02.996.498 1.524.479.527 1.387.527t1.416-.518.508-1.484q0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.175-.195.508-.195.36 0 .508.234.156.234.175.703h1.123q-.03-.976-.498-1.484-.468-.518-1.308-.518m4.057 0q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518" />
+                </svg>
+                <p class="text-white ms-18 mt-4 font-bold ">CSS</p><br>
+            </div>
+
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] md:mt-10 md:ms-25">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-bootstrap text-blue-500 ms-16 mt-8 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path
+                        d="M5.062 12h3.475c1.804 0 2.888-.908 2.888-2.396 0-1.102-.761-1.916-1.904-2.034v-.1c.832-.14 1.482-.93 1.482-1.816 0-1.3-.955-2.11-2.542-2.11H5.062zm1.313-4.875V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762V8.162h1.822c1.236 0 1.887.463 1.887 1.348 0 .896-.627 1.377-1.811 1.377z" />
+                    <path
+                        d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4zm4-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V4a3 3 0 0 0-3-3z" />
+                </svg>
+                <p class="text-white ms-10 mt-2 font-bold ">BOOTSTRAP</p>
+            </div>
+            <div class="border-1 border-gray-500 w-40 rounded-[14px] mt-10 ms-25">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                    class="bi bi-css text-blue-500 ms-16 mt-8 bg-[rgb(13,26,32)]" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zM4.59 7.498q-.908 0-1.455.508-.547.507-.547 1.484v3.106q0 .986.527 1.484t1.406.498q.576 0 1.016-.224.45-.225.703-.674.255-.45.254-1.114v-.185h-1.22v.176q0 .449-.186.683t-.527.235q-.372-.01-.557-.264-.186-.255-.186-.752V9.686q0-.547.166-.811.177-.264.577-.264.321 0 .517.225.195.224.195.693v.205h1.23V9.52q0-.674-.243-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.586 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.304.42.967.732l.469.215q.44.186.625.43.186.244.186.635 0 .478-.166.703-.157.224-.528.224-.36 0-.547-.244-.185-.243-.205-.752H6.87q.02.996.498 1.524.479.527 1.387.527t1.416-.518.508-1.484q0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.175-.195.508-.195.36 0 .508.234.156.234.175.703h1.123q-.03-.976-.498-1.484-.468-.518-1.308-.518m4.057 0q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518" />
+                </svg>
+                <p class="text-white ms-7 mt-4 font-bold ">TAILWIND CSS</p><br>
+            </div>
+        </div>
+    </div><br><br><br>
+    <!-- Skills -->
+
+    <!-- Featured Projects -->
+    <div class="text-white text-3xl font-bold ms-15 mt-10 md:ms-60 md:mt-30" id="Projects"> Featured Projects</div>
+    <p class="text-gray-400 mt-4 ms-15 md:ms-60">A selection of my recent work and experiments. </p>
+
+    <div class="ms-15 md:flex md:ms-60">
+        <div class="mt-12">
+            <div class="bg-neutral-primary-soft block max-w-sm border-2 border-gray-500     rounded-[8px] shadow-xs">
+                <a href="#">
+                    <img class="rounded-base" src="images/pt.png" alt="">
+                </a>
+
+                <a href="#">
+                    <div class="p-2">
+                        <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading text-white">ProTech
+                            Computer Class
+                        </h5>
+                </a>
+                <p class="mb-6 text-gray-400">In today’s fast-paced digital landscape, fostering seamless
+                    collaboration
+                    among Developers and IT Operations.</p>
+            </div>
+            <div class="flex ms-30">
+                <div class=" text-white w-15 p-1 bg-[rgba(255,255,255,0.1)]">
+                    <p class="ms-1 font-bold">HTML</p>
+                </div>
+                <div class=" text-white w-15 ms-4 p-1 bg-[rgba(255,255,255,0.1)]">
+                    <p class="ms-2 font-bold">CSS</p>
+                </div>
+            </div><br>
+        </div>
+    </div>
+
+    <div class=" mt-10 md:mt-12 md:ms-20">
+        <div class="bg-neutral-primary-soft block max-w-sm border-2  border-gray-500 rounded-[8px] shadow-xs">
+            <a href="#">
+                <img class="rounded-base" src="images/rt.png " alt="" />
+            </a>
+
+            <a href="#">
+                <div class="p-2">
+                    <h5 class="mt-6 mb-2 text-2xl font-semibold tracking-tight text-heading text-white">
+                        Restaurant
+                    </h5>
+            </a>
+            <p class="mb-6 text-gray-400">In today’s fast-paced digital landscape, fostering seamless
+                collaboration
+                among Developers and IT Operations.</p>
+        </div>
+        <div class="flex ms-14">
+            <div class=" text-white w-15 p-1 bg-[rgba(255,255,255,0.1)]">
+                <p class="ms-1 font-bold">HTML</p>
+            </div>
+            <div class=" text-white w-15 ms-4 p-1 bg-[rgba(255,255,255,0.1)]">
+                <p class="ms-2 font-bold">CSS</p>
+            </div>
+            <div class=" text-white w-30 ms-4 p-1 bg-[rgba(255,255,255,0.1)]">
+                <p class="ms-2 font-bold text-white">BOOTSTRAP</p>
+            </div>
+        </div><br>
+    </div>
+
+    </div>
+    </div><br><br><br>
+    <!-- Featured Projects -->
+    <!-- Contact -->
+    <div class="" id="Contact">
+        <div class="md:flex">
+            <div class="mt-20">
+                <div class="text-white ms-15 text-3xl font-bold md:ms-60">Let's Contact</div>
+                <p class="text-gray-400 ms-15 md:ms-60 mt-4">If you interest , you can contact me .Send me a message
+                    and<br> I
+                    will
+                    get
+                    back
+                    to you
+                    as soon as possible.
+                </p>
+
+                <div class="hidden md:block">
+                    <div class="mt-10 ms-15 flex md:flex">
+                        <div class="mt bg-[rgb(17,31,65)] w-15 p-2 rounded-[4px] md:ms-60 md:mt-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-envelope-fill text-blue-600 mt-1
+                            " viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                            </svg>
+                        </div>
+                        <div class="ms-5 md:ms-10">
+                            <p class="text-white font-bold md:mt-10 ">Email</p>
+                            <div class="text-gray-400 mt-2">HMSPH@gmail.com</div>
+                        </div>
+                    </div>
+                    <div class="mt-10 ms-15 flex md:flex">
+                        <div class="bg-[rgb(17,31,65)] w-15 p-2 rounded-[4px] md:ms-60 md:mt-10">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor"
+                                class="bi bi-clipboard-plus-fill text-blue-500 mt-2" viewBox="0 0 16 16">
+                                <path
+                                    d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+                                <path
+                                    d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm4.5 6V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5a.5.5 0 0 1 1 0" />
+                            </svg>
+                        </div>
+                        <div class=" ms-5 md:ms-10">
+                            <p class="text-white font-bold md:mt-10 ">Follow Me</p>
+                            <div class="text-gray-400 mt-2">Mr.jackrich</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex md:hidden">
+                <div class="mt-10 ms-15 flex md:flex">
+                    <div class="mt bg-[rgb(17,31,65)] w-15 p-2 rounded-[4px] md:ms-60 md:mt-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor" class="bi bi-envelope-fill text-blue-600 mt-1
+                            " viewBox="0 0 16 16">
+                            <path
+                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                        </svg>
+                    </div>
+                    <div class="ms-5 md:ms-10">
+                        <p class="text-white font-bold md:mt-10 ">Email</p>
+                        <div class="text-gray-400 mt-2">HMSPH@gmail.com</div>
+                    </div>
+                </div>
+                <div class="mt-10 ms-15 flex md:flex">
+                    <div class="bg-[rgb(17,31,65)] w-15 p-2 rounded-[4px] md:ms-60 md:mt-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="30" fill="currentColor"
+                            class="bi bi-clipboard-plus-fill text-blue-500 mt-2" viewBox="0 0 16 16">
+                            <path
+                                d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z" />
+                            <path
+                                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm4.5 6V9H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V10H6a.5.5 0 0 1 0-1h1.5V7.5a.5.5 0 0 1 1 0" />
+                        </svg>
+                    </div>
+                    <div class=" ms-5 md:ms-10">
+                        <p class="text-white font-bold md:mt-10 ">Follow Me</p>
+                        <div class="text-gray-400 mt-2">Mr.jackrich</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="ms-15 mt-10  w-122 border-2  border-gray-500 md:mt-30  rounded-[6px] md:ms-20 p-6">
+                <div class="flex">
+                    <div>
+                        <p class="text-white ">Name</p>
+                        <input type="text" placeholder="Jackrich" class="text-white p-2 bg-gray-800 rounded-[6px] mt-2">
+                    </div>
+                    <div class="ms-10">
+                        <p class="text-white ">Email</p>
+                        <input type="text" placeholder="email.com"
+                            class="text-white p-2 bg-gray-800 rounded-[6px] mt-2">
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-white ">Subject</p>
+                    <input type="text" placeholder="Project"
+                        class="text-white p-2 bg-gray-800 w-110 md:w-full rounded-[6px] mt-2">
+                </div>
+                <div class="mt-4">
+                    <p class="text-white ">Message</p>
+                    <textarea name="" placeholder="How can I help you?"
+                        class="text-white p-2 bg-gray-800 w-110 md:w-full rounded-[6px] mt-2 h-30"></textarea>
+                    <button class="bg-blue-600 p-2 w-110 md:w-full rounded-[6px] mt-4" style="cursor: pointer;">Send
+                        Message</button>
+                </div>
+            </div>
+        </div><br><br>
+        <!-- Contact -->
+        <!-- footer -->
+        <div class="bg-gray-900 p-8 mt-20">
+            <div class="flex">
+                <h1 class="text-2xl ms-15 font-bold text-white md:ms-60">DevPortfolio</h1>
+                <h1 class="text-blue-400 hidden md:block md:ms-60 mt-1 ">@2026DevPortfolio.Build with Tailwind-Css</h1>
+                <div class=" hidden md:block md:flex md:ms-50">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-briefcase-fill text-blue-500 mt-1" viewBox="0 0 16 16">
+                        <path
+                            d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5" />
+                        <path
+                            d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-folder-fill text-blue-500 ms-5 mt-1" viewBox="0 0 16 16">
+                        <path
+                            d="M9.828 3h3.982a2 2 0 0 1 1.992 2.181l-.637 7A2 2 0 0 1 13.174 14H2.825a2 2 0 0 1-1.991-1.819l-.637-7a2 2 0 0 1 .342-1.31L.5 3a2 2 0 0 1 2-2h3.672a2 2 0 0 1 1.414.586l.828.828A2 2 0 0 0 9.828 3m-8.322.12q.322-.119.684-.12h5.396l-.707-.707A1 1 0 0 0 6.172 2H2.5a1 1 0 0 0-1 .981z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                        class="bi bi-card-image text-blue-500 ms-5 mt-1" viewBox="0 0 16 16">
+                        <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0" />
+                        <path
+                            d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54L1 12.5v-9a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+        <!-- footer -->
+
+
+
+</body>
+
+</html>
