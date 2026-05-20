@@ -7,6 +7,230 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>HMS PortfolioPro - Myanmar</title>
 </head>
+<script type="module">
+
+    import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.160/build/three.module.js';
+
+    /* =========================
+       SCENE
+    ========================= */
+
+    const scene = new THREE.Scene();
+
+    /* =========================
+       CAMERA
+    ========================= */
+
+    const camera = new THREE.PerspectiveCamera(
+        75,
+        window.innerWidth / window.innerHeight,
+        0.1,
+        1000
+    );
+
+    camera.position.z = 5;
+
+    /* =========================
+       RENDERER
+    ========================= */
+
+    const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true
+    });
+
+    renderer.setSize(
+        window.innerWidth,
+        window.innerHeight
+    );
+
+    renderer.setPixelRatio(window.devicePixelRatio);
+
+    renderer.domElement.style.position = 'fixed';
+    renderer.domElement.style.top = '0';
+    renderer.domElement.style.left = '0';
+    renderer.domElement.style.zIndex = '-1';
+
+    document.body.appendChild(renderer.domElement);
+
+    /* =========================
+       LIGHTS
+    ========================= */
+
+    const light1 = new THREE.PointLight(
+        0x22d3ee,
+        4
+    );
+
+    light1.position.set(5, 5, 5);
+
+    scene.add(light1);
+
+    const light2 = new THREE.PointLight(
+        0xa855f7,
+        5
+    );
+
+    light2.position.set(-5, -5, 5);
+
+    scene.add(light2);
+
+    /* =========================
+       MAIN OBJECT
+    ========================= */
+
+    const geometry = new THREE.TorusKnotGeometry(
+        1,
+        0.35,
+        200,
+        32
+    );
+
+    const material = new THREE.MeshPhysicalMaterial({
+
+        color: 0x22d3ee,
+
+        metalness: 1,
+
+        roughness: 0.1,
+
+        transmission: 0.4,
+
+        thickness: 1,
+
+        clearcoat: 1,
+
+        clearcoatRoughness: 0
+
+    });
+
+    const torus = new THREE.Mesh(
+        geometry,
+        material
+    );
+
+    scene.add(torus);
+
+    /* =========================
+       PARTICLES
+    ========================= */
+
+    const particlesGeometry = new THREE.BufferGeometry();
+
+    const particlesCount = 4000;
+
+    const positions = [];
+
+    for (let i = 0; i < particlesCount; i++) {
+
+        positions.push(
+            (Math.random() - 0.5) * 100,
+            (Math.random() - 0.5) * 100,
+            (Math.random() - 0.5) * 100
+        );
+
+    }
+
+    particlesGeometry.setAttribute(
+        'position',
+        new THREE.Float32BufferAttribute(
+            positions,
+            3
+        )
+    );
+
+    const particlesMaterial = new THREE.PointsMaterial({
+
+        color: 0xffffff,
+
+        size: 0.03,
+
+        transparent: true,
+
+        opacity: 0.8
+
+    });
+
+    const particles = new THREE.Points(
+        particlesGeometry,
+        particlesMaterial
+    );
+
+    scene.add(particles);
+
+    /* =========================
+       MOUSE EFFECT
+    ========================= */
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+
+        mouseX =
+            (e.clientX / window.innerWidth - 0.5) * 2;
+
+        mouseY =
+            (e.clientY / window.innerHeight - 0.5) * 2;
+
+    });
+
+    /* =========================
+       ANIMATE
+    ========================= */
+
+    function animate() {
+
+        requestAnimationFrame(animate);
+
+        /* Smooth Rotation */
+
+        torus.rotation.x += 0.002;
+
+        torus.rotation.y += 0.004;
+
+        /* Mouse Interaction */
+
+        torus.rotation.x += mouseY * 0.003;
+
+        torus.rotation.y += mouseX * 0.003;
+
+        /* Floating */
+
+        torus.position.y =
+            Math.sin(Date.now() * 0.001) * 0.3;
+
+        /* Particle Motion */
+
+        particles.rotation.y += 0.0004;
+
+        particles.rotation.x += 0.0001;
+
+        renderer.render(scene, camera);
+
+    }
+
+    animate();
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    window.addEventListener('resize', () => {
+
+        camera.aspect =
+            window.innerWidth / window.innerHeight;
+
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(
+            window.innerWidth,
+            window.innerHeight
+        );
+
+    });
+
+</script>
 
 <body
     class="min-h-screen overflow-x-hidden bg-[rgb(16,22,34)] antialiased text-white scroll-smooth opacity-0 translate-y-5 transition-all duration-1000"
@@ -54,15 +278,15 @@
         <div id="mobilenav" class="hidden border-t border-gray-800 bg-gray-900 px-4 py-4 md:hidden">
             <nav class="flex flex-col gap-1" aria-label="Mobile">
                 <a href="#Home" onclick="showdiv()"
-                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">ပင်မ</a>
+                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">Home</a>
                 <a href="#About" onclick="showdiv()"
-                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">မိတ်ဆက်</a>
-                <a href="#Projects" onclick="showdiv()"
-                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">ပရောဂျက်များ</a>
+                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">About</a>
                 <a href="#Skills" onclick="showdiv()"
-                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">ကျွမ်းကျင်မှုများ</a>
+                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">Skill</a>
+                <a href="#Projects" onclick="showdiv()"
+                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">Projects</a>
                 <a href="#Contact" onclick="showdiv()"
-                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">ဆက်သွယ်ရန်</a>
+                    class="rounded-lg px-3 py-3 text-base font-semibold text-white hover:bg-white/5">Contact</a>
                 <a type="button" href="#Contact"
                     class="mt-2 w-full rounded bg-[rgb(15,90,226)] py-3 text-center text-sm font-medium text-white">
                     အလုပ်ခန့်ပါ
@@ -94,11 +318,11 @@
         <div class="flex flex-col items-stretch gap-10 lg:flex-row lg:items-center lg:gap-12 xl:gap-16">
             <div class="min-w-0 flex-1">
                 <h1 class="text-3xl font-bold leading-tight text-white sm:text-4xl md:text-5xl lg:text-6xl">
-                    ဖန်တီးမှု<br>Developer &amp;
+                    Creative<br>Developer &amp;
                 </h1>
                 <h2 class="mt-2 text-3xl font-bold leading-tight text-blue-600 sm:text-4xl md:text-5xl lg:text-6xl">
-                    ပြဿနာ ဖြေရှင်းသူ
-                </h2><br><br>
+                    Problem Solver
+                </h2><br>
                 <p class="mt-4 max-w-xl text-base leading-relaxed text-gray-500 sm:text-lg">
                     မြန်နှုန်းမြင့် web applications များကို သန့်ရှင်းတဲ့ code နဲ့ အသုံးပြုသူအတွေ့အကြုံကောင်းများအတွက်
                     တည်ဆောက်ပေးပါတယ်။
@@ -430,57 +654,7 @@
     <!-- Skills -->
 
     <!-- Featured Projects -->
-    <section class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16" id="Projects">
-        <h2 class="text-3xl font-bold text-white">အထူးပရောဂျက်များ</h2><br>
-        <p class="mt-4 max-w-2xl text-gray-400">မကြာသေးမီက ပြုလုပ်ထားသော အလုပ်များနှင့် စမ်းသပ်မှုများထဲမှ
-            ရွေးချယ်တင်ပြထားသည်။</p>
 
-        <div class="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-10">
-            <article
-                class="flex flex-col overflow-hidden rounded-lg border-2 border-gray-500 bg-neutral-primary-soft shadow-xs">
-                <a href="#" class="block overflow-hidden">
-                    <img class="h-auto w-full object-cover" src="images/pt.png" alt="ProTech Computer Class preview">
-                </a>
-                <div class="flex flex-1 flex-col p-4 sm:p-5">
-                    <h3 class="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                        <a href="#" class="hover:text-blue-400">ProTech Computer Class</a>
-                    </h3>
-                    <p class="mt-3 flex-1 text-gray-400">ယနေ့ခေတ် digital ပတ်ဝန်းကျင်တွင် Developer များနှင့် IT
-                        Operations
-                        များအကြား ပူးပေါင်းလုပ်ဆောင်မှုကို ထိရောက်စွာ ပံ့ပိုးပေးသော project ဖြစ်သည်။</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span
-                            class="rounded bg-[rgba(255,255,255,0.1)] px-2 py-1 text-sm font-bold text-white">HTML</span>
-                        <span
-                            class="rounded bg-[rgba(255,255,255,0.1)] px-2 py-1 text-sm font-bold text-white">CSS</span>
-                    </div>
-                </div>
-            </article>
-
-            <article
-                class="flex flex-col overflow-hidden rounded-lg border-2 border-gray-500 bg-neutral-primary-soft shadow-xs">
-                <a href="#" class="block overflow-hidden">
-                    <img class="h-auto w-full object-cover" src="images/rt.png" alt="Restaurant project preview">
-                </a>
-                <div class="flex flex-1 flex-col p-4 sm:p-5">
-                    <h3 class="text-xl font-semibold tracking-tight text-white sm:text-2xl">
-                        <a href="#" class="hover:text-blue-400">Restaurant</a>
-                    </h3>
-                    <p class="mt-3 flex-1 text-gray-400">မြန်ဆန်သော digital လောကအတွက် restaurant ဝဘ်ဆိုဒ်ကို responsive
-                        အဖြစ်
-                        ဖန်တီးထားပြီး အသုံးပြုသူအတွေ့အကြုံကောင်းကို အဓိကထားထားသည်။</p>
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span
-                            class="rounded bg-[rgba(255,255,255,0.1)] px-2 py-1 text-sm font-bold text-white">HTML</span>
-                        <span
-                            class="rounded bg-[rgba(255,255,255,0.1)] px-2 py-1 text-sm font-bold text-white">CSS</span>
-                        <span
-                            class="rounded bg-[rgba(255,255,255,0.1)] px-2 py-1 text-sm font-bold text-white">BOOTSTRAP</span>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
     <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8" id="Projects">
 
         <!-- Title -->
